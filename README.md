@@ -1,1 +1,1 @@
-# CFOPAlgoritms
+# CFOPAlgorithms
