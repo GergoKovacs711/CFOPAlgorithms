@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="oll_list_icons">
+        <item>@drawable/oll_01</item>
+        <item>@drawable/oll_02</item>
+        <item>@drawable/oll_03</item>
+        <item>@drawable/oll_04</item>
+        <item>@drawable/oll_05</item>
+        <item>@drawable/oll_06</item>
+        <item>@drawable/oll_07</item>
+        <item>@drawable/oll_08</item>
+        <item>@drawable/oll_09</item>
+        <item>@drawable/oll_10</item>
+        <item>@drawable/oll_11</item>
+        <item>@drawable/oll_12</item>
+        <item>@drawable/oll_13</item>
+        <item>@drawable/oll_14</item>
+        <item>@drawable/oll_15</item>
+        <item>@drawable/oll_16</item>
+        <item>@drawable/oll_17</item>
+        <item>@drawable/oll_18</item>
+        <item>@drawable/oll_19</item>
+        <item>@drawable/oll_20</item>
+        <item>@drawable/oll_21</item>
+        <item>@drawable/oll_22</item>
+        <item>@drawable/oll_23</item>
+        <item>@drawable/oll_24</item>
+        <item>@drawable/oll_25</item>
+        <item>@drawable/oll_26</item>
+        <item>@drawable/oll_27</item>
+        <item>@drawable/oll_28</item>
+        <item>@drawable/oll_29</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_31</item>
+        <item>@drawable/oll_32</item>
+        <item>@drawable/oll_33</item>
+        <item>@drawable/oll_34</item>
+        <item>@drawable/oll_35</item>
+        <item>@drawable/oll_36</item>
+        <item>@drawable/oll_37</item>
+        <item>@drawable/oll_38</item>
+        <item>@drawable/oll_39</item>
+        <item>@drawable/oll_40</item>
+        <item>@drawable/oll_41</item>
+        <item>@drawable/oll_42</item>
+        <item>@drawable/oll_43</item>
+        <item>@drawable/oll_44</item>
+        <item>@drawable/oll_45</item>
+        <item>@drawable/oll_46</item>
+        <item>@drawable/oll_47</item>
+        <item>@drawable/oll_48</item>
+        <item>@drawable/oll_49</item>
+        <item>@drawable/oll_50</item>
+        <item>@drawable/oll_51</item>
+        <item>@drawable/oll_52</item>
+        <item>@drawable/oll_53</item>
+        <item>@drawable/oll_54</item>
+        <item>@drawable/oll_55</item>
+        <item>@drawable/oll_56</item>
+        <item>@drawable/oll_57</item>
+    </array>
+
+    <array name="f2l_list_icons">
+        <item>@drawable/oll_01</item>
+        <item>@drawable/oll_02</item>
+    </array>
+
+    <array name="pll_list_icons">
+        <item>@drawable/oll_01</item>
+        <item>@drawable/oll_02</item>
+    </array>
+</resources>

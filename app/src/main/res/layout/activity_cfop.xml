@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CFOPActivity">
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView style="@style/Title"
+            android:id="@+id/cfop_main_title"
+            android:layout_alignParentTop="true"
+            android:text="Title" />
+
+        <ImageView
+            android:id="@+id/cfop_image"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cfop_main_title"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/Paragraph"
+            android:id="@+id/cfop_description"
+            android:layout_below="@+id/cfop_image"
+            android:text="Description" />
+
+        <TextView
+            style="@style/Title"
+            android:id="@+id/cfop_first_title"
+            android:text="Title"
+            android:layout_below="@+id/cfop_description" />
+
+        <View
+            android:id="@+id/divider1"
+            style="@style/Divider"
+            android:layout_below="@+id/cfop_first_title" />
+
+        <TextView
+            style="@style/Paragraph"
+            android:id="@+id/cfop_first_paragraph"
+            android:layout_below="@+id/divider1"
+            android:text="Paragraph"/>
+
+        <TextView
+            style="@style/Title"
+            android:id="@+id/cfop_second_title"
+            android:text="Title"
+            android:layout_below="@+id/cfop_first_paragraph" />
+
+        <View
+            android:id="@+id/divider2"
+            style="@style/Divider"
+            android:layout_below="@+id/cfop_second_title" />
+
+        <TextView
+            style="@style/Paragraph"
+            android:id="@+id/cfop_second_paragraph"
+            android:layout_below="@+id/divider2"
+            android:text="Paragraph"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_below="@id/cfop_second_paragraph">
+            <ListView
+                android:id="@+id/cfopListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

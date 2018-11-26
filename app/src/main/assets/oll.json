@@ -1,0 +1,504 @@
+{
+  "cases": [
+    {
+      "name": "OLL 1",
+      "algs": [
+        "(R U2) (R2' F R F' U2') (R' F R F')",
+        "R U B' R B R2 U' R' F R F'"
+      ]
+    },
+    {
+      "name": "OLL 2",
+      "algs": [
+        "F (R U R' U') F' f (R U R' U') f'",
+        "F (R U R' U') S (R U R' U') f'"
+      ]
+    },
+    {
+      "name": "OLL 3",
+      "algs": [
+        "(y) f (R U R' U') f' U' F (R U R' U') F'",
+        "(y2) r' R2 U R' U r U2 r' U R' r",
+        "(y2) M U l' U2 l U L' U L M'"
+      ]
+    },
+    {
+      "name": "OLL 4",
+      "algs": [
+        "(R U R' U') f' U F (R U R' U') F'",
+        "R' U2 x R' U R U' y R' U' R' U R' F",
+        "(y) r' R U' r U2 r' U' R U' R2' r"
+      ]
+    },
+    {
+      "name": "OLL 5",
+      "algs": [
+        "(r' U2) (R U R' U r)",
+        "(y2) R' F2 L F L' F R",
+        "(y2) l' U2 L U L' U l",
+        "(y) x' U' l2 U l F' l U"
+      ]
+    },
+    {
+      "name": "OLL 6",
+      "algs": [
+        "(y2) r U2 R' U' R U' r'",
+        "l U2 L' U' L U' l'"
+      ]
+    },
+    {
+      "name": "OLL 7",
+      "algs": [
+        "r U R' U R U2 r'",
+        "(y) B L F' L F L2 B'",
+        "F R' F' R U2 R U2 R'",
+        "L' U2 L U2 L F' L' F"
+      ]
+    },
+    {
+      "name": "OLL 8",
+      "algs": [
+        "l' U' L U' L' U2 l",
+        "(y2) r' U' R U' R' U2 r",
+        "(y') B' R' F R' F' R2 B",
+        "R U2 R' U2 R' F R F'"
+      ]
+    },
+    {
+      "name": "OLL 9",
+      "algs": [
+        "(y') (R U R' U') R' F R2 U R' U' F'",
+        "(y') R' U' R y r U' r' U r U r'",
+        "(y') R' U' R y' x' R U' R' F R U R' x",
+        "(y) L' U' L y l U' l' U l U l'"
+      ]
+    },
+    {
+      "name": "OLL 10",
+      "algs": [
+        "(y') R U R' y R' F R U' R' F' R",
+        "(y') R U R' y' r' U r U' r' U' r",
+        "(y') (R U R' U) (R' F R F') R U2 R'"
+      ]
+    },
+    {
+      "name": "OLL 11",
+      "algs": [
+        "F' (L' U' L U) F y F (R U R' U') F'",
+        "R U' R' U' R U' R' U2 F' U F U' R U R'",
+        "(y) r U R' U R' F R F' R U2 r'",
+        "(y') r' R2 U R' U R U2 R' U M'"
+      ]
+    },
+    {
+      "name": "OLL 12",
+      "algs": [
+        "F (R U R' U') F' U F (R U R' U') F'",
+        "y) F R U R2 F R y' R2 U R U2 R'",
+        "(y') r R2' U' R U' R' U2 R U' R r'",
+        "(y') M' R' U' R U' R' U2 R U' M"
+      ]
+    },
+    {
+      "name": "OLL 13",
+      "algs": [
+        "F U R U' R2 F' R U R U' R'",
+        "F U R U2 R' U' R U R' F'",
+        "r U' r' U' r U r' y' R' U R",
+        "(y2) x' R U' R' F' R U R' x y R' U R"
+      ]
+    },
+    {
+      "name": "OLL 14",
+      "algs": [
+        "R' F R U R' F' R y' R U' R'",
+        "F' U' L' U2 L U L' U' L F",
+        "l' U l U l' U' l y' R U' R'",
+        "(y') R' U' y' R' U R2 B R' U' R' U R"
+      ]
+    },
+    {
+      "name": "OLL 15",
+      "algs": [
+        "(y2) l' U' l (L' U' L U) l' U l",
+        "(y2) R' F' R L' U' L U R' F R",
+        "r' U' r R' U' R U r' U r"
+      ]
+    },
+    {
+      "name": "OLL 16",
+      "algs": [
+        "(y2) r U r' (R U R' U') r U' r'",
+        "(y2) r U M U R' U' r U' r'",
+        "l U l' L U L' U' l U' l'"
+      ]
+    },
+    {
+      "name": "OLL 17",
+      "algs": [
+        "R U R' U (R' F R F') U2 (R' F R F')",
+        "f (R U R' U') y' r' (R U R' U') R' F R F'",
+        "F R' F' l R L' U R U' R' U' M'",
+        "F' R U2 r' U F2 U' r U2 R' F"
+      ]
+    },
+    {
+      "name": "OLL 18",
+      "algs": [
+        "(y') r U R' U R U2 r2' U' R U' R' U2 r",
+        "(y) F R U R' d R' U2 R' F R F'",
+        "R U2 R2 F R F' U2 M' U R U' r'",
+        "l' U' r' U2 L U2 L' U2 r U l"
+      ]
+    },
+    {
+      "name": "OLL 19",
+      "algs": [
+        "r' R U R U R' U' r R2' F R F'",
+        "M U R U R' U' M' R' F R F'",
+        "M U R U R' U' r R2' F R F'",
+        "r' U2 R U R' U r2 U2' R' U' R U' r'"
+      ]
+    },
+    {
+      "name": "OLL 20",
+      "algs": [
+        "R U R U R' U' r2 R2' U R U' r'",
+        "M U R U R' U' M2 U R U' r'",
+        "r U R' U' M2 (U R U' R') U' M'",
+        "x U R' U' M2 U R U' M' x' U' M'"
+      ]
+    },
+    {
+      "name": "OLL 21",
+      "algs": [
+        "R U R' U R U' R' U R U2 R'",
+        "y R U2 R' U' R U R' U' R U' R'",
+        "y F (R U R' U') (R U R' U') (R U R' U') F'",
+        "y F (U R U' R') (U R U' R') (U R U' R') F'"
+      ]
+    },
+    {
+      "name": "OLL 22",
+      "algs": [
+        "R U2 R2' U' R2 U' R2' U2 R",
+        "f (R U R' U') f' F (R U R' U') F'",
+        "y2 f' (L' U' L U) f F' (L' U' L U) F",
+        "y2 L' U2 L2 U L2 U L2 U2 L'"
+      ]
+    },
+    {
+      "name": "OLL 23",
+      "algs": [
+        "R2' D' R U2 R' D R U2 R",
+        "R' U2 R F U' R' U' R U F'",
+        "F R U' R' U R U R' U R U' R' F'",
+        "(y') R U R' U' (R U' R' U2) (R U' R' U2) R U R'"
+      ]
+    },
+    {
+      "name": "OLL 24",
+      "algs": [
+        "F R' F' L' F R F'",
+        "r U R' U' L' U R U' x'",
+        "r U R' U' r' F R F'",
+        "(y' x') R U R' D R U' R' D'"
+      ]
+    },
+    {
+      "name": "OLL 25",
+      "algs": [
+        "R U2 R' U' (R U R' U') (R U R' U') R U' R'",
+        "R U R' U (R U' R' U) (R U' R' U) R U2 R'",
+        "y2 R' F R B' R' F' R B",
+        "y2 F R' F' L F R F' L'"
+      ]
+    },
+    {
+      "name": "OLL 26",
+      "algs": [
+        "(R' U L U') (R U L')",
+        "y2 R' U' R U' R' U2 R",
+        "y' R U2 R' U' R U' R'",
+        "y L U2 L' U' L U' L'"
+      ]
+    },
+    {
+      "name": "OLL 27",
+      "algs": [
+        "(U L U' R') (U L' U' R)",
+        "R U R' U R U2 R'",
+        "y' R' U2 R U R' U R",
+        "y L' U2 L U L' U L"
+      ]
+    },
+    {
+      "name": "OLL 28",
+      "algs": [
+        "r U R' U' r' R U R U' R'",
+        "(y) r U2 R' U' R U' r' R U R' U R U2 R'",
+        "r U R' U R U2 r' R U2 R' U' R U' R'",
+        "(y) r' U' R U' R' U2 r R' U2 R U R' U R"
+      ]
+    },
+    {
+      "name": "OLL 29",
+      "algs": [
+        "M U (R U R' U') (R' F R F') M'",
+        "r2 D' r U r' D r2 U' r' U' r",
+        "(y) (R U R' U') (R U' R' F') U' (F R U R')",
+        "(y) R' U2 R2 U R' U' R' U2 F R F'"
+      ]
+    },
+    {
+      "name": "OLL 30",
+      "algs": [
+        "r' U2 R U R' U r R U2 R' U' R U' R'",
+        "f R U R2 U' R' U R2 U' R' f'",
+        "R2' U R' B' R U' R2' U R B R'",
+        "M U' (L' U' L U) (L F' L' F) M'"
+      ]
+    },
+    {
+      "name": "OLL 31",
+      "algs": [
+        "(y2) R' U' F U R U' R' F' R",
+        "(y) (F R' F' R) (U R U R') (U' R U' R')",
+        "L' d' R d L U' L' B' L",
+        "S' L' U' L U L F' L' f"
+      ]
+    },
+    {
+      "name": "OLL 32",
+      "algs": [
+        "R U B' U' R' U R B R'",
+        "(y2) x' R U R' D R U' R U' R' U R' D' x",
+        "(y2) F U R U' F' r U R' U' r'",
+        "R U x' U' F' R' F R U R'"
+      ]
+    },
+    {
+      "name": "OLL 33",
+      "algs": [
+        "(R U R' U') (R' F R F')",
+        "(y2) (L' U' L U) (L F' L' F)",
+        "R' U' R U l U' R' U x",
+        "R U R' F' U' F R U' R'"
+      ]
+    },
+    {
+      "name": "OLL 34",
+      "algs": [
+        "(R U R' U') x D' R' U R E' z'",
+        "(y2) R' U' R U y' x' R U L' U' M'",
+        "R U R' U' y' r' U' R U M'",
+        "(R U R' U') B' l' U R d' D"
+      ]
+    },
+    {
+      "name": "OLL 35",
+      "algs": [
+        "R U2 R2' F R F' R U2 R'",
+        "R U B' R B R2 U R U2 R'",
+        "U' M2 F' U2 F M U2 R U L' x'",
+        "U' S2 L U2 L' S' U2 B' U' F z'"
+      ]
+    },
+    {
+      "name": "OLL 36",
+      "algs": [
+        "R' U' R U' R' U R U R y R' F' R",
+        "R' U' R U' R' U R U R B' R' B",
+        "(y2) (L' U' L U') (L' U L U) (L F' L' F)",
+        "(R U R' U') y (L' U2' L U) y' (R U R')"
+      ]
+    },
+    {
+      "name": "OLL 37",
+      "algs": [
+        "(y) F R U' R' U' R U R' F'",
+        "(y) R' F R F' U' F' U F",
+        "(y) R' F R F' y' U' R' U R",
+        "(y) F R' F' R U R U' R'"
+      ]
+    },
+    {
+      "name": "OLL 38",
+      "algs": [
+        "(y2) (R U R' U) (R U' R' U') (R' F R F')",
+        "L U L' U L U' L' U' L' B L B'",
+        "(L' U' L U) y' (R U2 R' U') y (L' U' L)"
+
+      ]
+    },
+    {
+      "name": "OLL 39",
+      "algs": [
+        "L F' (L' U' L U) F U' L'",
+        "(y2) l U' l' U' R U B U' R'",
+        "(y2) f' L F L' U' L' U L S",
+        "(y2) R U R' F' U' F U R U2 R'"
+
+      ]
+    },
+    {
+      "name": "OLL 40",
+      "algs": [
+        "R' F (R U R' U') F' U R",
+        "(y2) f R' F' R U R U' R' S'",
+        "(y2) L' B L U L' U' B' U L"
+      ]
+    },
+    {
+      "name": "OLL 41",
+      "algs": [
+        "R U' R' U2 R U y R U' R' y' U' R'",
+        "(y) R U2' R' U' R U' R2 y L' U' L U F"	,
+        "(y2) F U R U' R' F' R' U2 R U R' U R",
+        "(y2) (R U R' U R U2 R') F (R U R' U') F'"
+      ]
+    },
+    {
+      "name": "OLL 42",
+      "algs": [
+        "r' R2 y R U R' U' y' R' U M'",
+        "R' U' R U F R U R' U' R' U R U' F'",
+        "L' U L U2 L' U' y' L' U L U F",
+        "(y) R' U2 R U R' U R2 y R U R' U' F'"
+      ]
+    },
+    {
+      "name": "OLL 43",
+      "algs": [
+        "(y) R' U' F' U F R",
+        "f' L' U' L U f",
+        "B' U' R' U R B",
+        "(y2) F' U' L' U L F"
+      ]
+    },
+    {
+      "name": "OLL 44",
+      "algs": [
+        "f (R U R' U') f'",
+        "(y2) F U R U' R' F'",
+        "(y) R U y' L U' L' B'",
+        "(y) F U R' F R F' U' F'"
+      ]
+    },
+    {
+      "name": "OLL 45",
+      "algs": [
+        "F (R U R' U') F'",
+        "f' (U' L' U L) f",
+        "(y2) f (U R U' R') f'",
+        "(y2) F' (L' U' L U) F"
+      ]
+    },
+    {
+      "name": "OLL 46",
+      "algs": [
+        "R' U' R' F R F' U R",
+        "R' U' l' U l F' U R",
+        "(y) F U F l' U' l U' F'",
+        "R U l U' R' U F' l'"
+      ]
+    },
+    {
+      "name": "OLL 47",
+      "algs": [
+        "F' (L' U' L U) (L' U' L U) F",
+        "(y') r U R' U R U2 r' R' U2 R U R' U R",
+        "R' U' x (R' U R U') (R' U R U') x' U R"
+      ]
+    },
+    {
+      "name": "OLL 48",
+      "algs": [
+        "F (R U R' U') (R U R' U') F'",
+        "(y2) f U R U' R' U R U' R' f'",
+        "(y) r U2 R' U' R U' r' R' U' R U' R' U2 R",
+        "(y') r' U' R U' R' U2 r R U2 R' U' R U' R'"
+      ]
+    },
+    {
+      "name": "OLL 49",
+      "algs": [
+        "R B' R2 F R2 B R2 F' R",
+        "l U' l2' U l2 U l2' U' l",
+        "(y2) r U' r2 U r2 U r2 U' r",
+        "(y2) R' F R' F' R2 d2 y' R' F R F'"
+      ]
+    },
+    {
+      "name": "OLL 50",
+      "algs": [
+        "(y2) R' F R2 B' R2 F' R2 B R'",
+        "(y2) (r U R U' r') (F R' U R U' R' F')",
+        "(y2) x' R' D R2 U' R2 D' R2 U R' x",
+        "r' U r2 U' r2' U' r2 U r'"
+      ]
+    },
+    {
+      "name": "OLL 51",
+      "algs": [
+        "F U R U' R' U R U' R' F'",
+        "(y2) f R U R' U' R U R' U' f'",
+        "(y') R' U2 R U R' F R' F' R U R"
+      ]
+    },
+    {
+      "name": "OLL 52",
+      "algs": [
+        "R' U' R U' R' d R' U R B",
+        "R U R' U R d' R U' R' F'",
+        "R' U' R U' R' U F' U F R",
+        "(y2) R' U' x U R' U' R U R' U' R x' U R"
+      ]
+    },
+    {
+      "name": "OLL 53",
+      "algs": [
+        "l' U' L U' L' U L U' L' U2 l",
+        "(y2) r' U' R U' R' U R U' R' U2 r",
+        "(y') r' U2 R U R' U' R U R' U r",
+        "(y') r U2 R' U' R U' r' R U2 R' U' R U' R'"
+      ]
+    },
+    {
+      "name": "OLL 54",
+      "algs": [
+        "r U R' U R U' R' U R U2 r'",
+        "(y') r U2 R' U' R U R' U' R U' r'",
+        "(y2) l U L' U L U' L' U L U2 l'",
+        "(y2) r' U' R U' R' U2 r R' U' R U' R' U2 R"
+      ]
+    },
+    {
+      "name": "OLL 55",
+      "algs": [
+        "(y) R' F (R U R U') R2 F' R2 U' R' (U R U R')",
+        "R U2 R2 U' R U' R' U2 F R F'",
+        "R' U2 R2 U R' U R U2 y l' U' l",
+        "r U2 R2 F R F' U2 r' F R F'"
+      ]
+    },
+    {
+      "name": "OLL 56",
+      "algs": [
+        "r U r' U R U' R' U R U' R' r U' r'",
+        "r' U' r U' R' U R U' R' U R r' U r",
+        "L F L' U R U' R' U R U' R' L F' L'",
+        "F R U R' U' R F' r U R' U' r'"
+      ]
+    },
+    {
+      "name": "OLL 57",
+      "algs": [
+        "R U R' U' M' U R U' r'",
+        "M' U' M' U' M' d2 M' U' M' U' M'",
+        "M' U M' U M' d2 M' U M' U M'",
+        "R U R' U' r R' U R U' r'"
+      ]
+    }
+  ]
+}

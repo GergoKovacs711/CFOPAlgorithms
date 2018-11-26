@@ -1,0 +1,91 @@
+<resources>
+    <string name="main_activity_name">CFOP Algorithms</string>
+    <string name="cfop_activity_name">CFOP Information</string>
+    <string name="cross_activity_name">Cross Information</string>
+    <string name="f2l_activity_name">F2L Algorithms</string>
+    <string name="oll_activity_name">OLL Algorithms</string>
+    <string name="pll_activity_name">PLL Algorithms</string>
+
+
+    <string-array name="main_list">
+        <item>CFOP</item>
+        <item>Cross</item>
+        <item>F2L</item>
+        <item>OLL</item>
+        <item>PLL</item>
+    </string-array>
+
+    <string-array name="main_list_description">
+        <item>Information about the CFOP method</item>
+        <item>Information about the cross</item>
+        <item>First Tow Layers algorithms</item>
+        <item>Permute Last Layer algorithms</item>
+        <item>Orient Last Layer algorithms</item>
+    </string-array>
+
+    <string-array name="webview_url">
+        <item>https://alg.cubing.net/?stage=/</item>
+        <item>&amp;type=alg&amp;alg=</item>
+    </string-array>
+
+    <string name="cfop_title">CFOP</string>
+    <string name="cfop_description">CFOP (Cross, F2L, OLL, PLL, pronounced C-F-O-P or C-fop) is a 3x3 speedsolving method proposed by several cubers around 1981. It is also known as the Fridrich Method after its popularizer, Jessica Fridrich. In part due to Fridrich\'s publication of the method on her website in 1995, CFOP has been the most dominant 3x3 speedcubing method since around 2000, with it and its variants used by the vast majority of the top speedcubers such as Feliks Zemdegs, Max Park, Sebastian Weyer, Mats Valk, etc </string>
+
+    <string name="cfop_first_title">Origin and Naming</string>
+    <string name="cfop_first_paragraph">"Jessica Fridrich is often erroneously credited as the sole inventor of CFOP. In reality, many developments were made in the early '80s by other cubers who have contributed to the method in its current form. The constituent techniques and their original proposers are as follows:
+
+Cross: David Singmaster
+F2L (4x corner + edge pairs): René Schoof
+OLL/PLL: Hans Dockhorn, Anneke Treep, with many algorithms developed by Jessica Fridrich
+
+During the resurgence in speedcubing's popularity in the late '90s and early 2000s, there was a general lack of information on the sport. Fridrich's website offered a vast wealth of information for those entering the sport, including a full description of CFOP with complete lists of algorithms. As a result, many who learned from her website began to call this method the "Fridrich Method," which explains the common use of the term today.
+
+Several high-profile cubers have long disputed this terminology; Ron van Bruchem, famously, has publicly written that he will never call CFOP the "Fridrich Method." This issue has become well-advertised within the cubing community around the year 2008, likely because of this. The term "CFOP" has since seen increasing usage compared to back then, also in part motivated by efforts to standardize terminology in method classification, and is now seen, commonly, as "Fridrich Method."
+
+While some cubers still insist on the term "CFOP," Fridrich's contribution to the popularization of the method is undeniable, and many others accept the term "Fridrich Method" as established terminology and a perfectly valid synonym for "CFOP.""
+    </string>
+
+    <string name="cfop_second_title">Steps</string>
+    <string name="cfop_second_paragraph">CFOP can be viewed as an advanced version of a Layer-By-Layer method. In particular, it combines some steps of the said method into one by using many more algorithms. Here, we outline pure CFOP without any additional trick. Also, the cube is commonly solved with the white side on top for the cross, yellow on the bottom for the cross, and opposite for the other steps. However, it is NOT required.</string>
+
+
+    <string-array name="CFOPList">
+        <item>Cross</item>
+        <item>F2L</item>
+        <item>OLL</item>
+        <item>PLL</item>
+    </string-array>
+
+
+    <string-array name="CFOPList_Descriptions">
+        <item>Make a cross on one side by solving all edges of a given face. A Make sure to align the edges with the second-layer centers.
+
+It is recommended that you solve the cross on the bottom, left, right or back face and that you become familiar doing the cross with all colors; not just one.</item>
+        <item>Fill in the four slots between the cross pieces, one slot at a time. Each slot is filled by inserting a corner and its corresponding edge simultaneously. Most of the 41 cases have reasonable intuitive solutions. The completion of this step leaves one with just the last layer, typically placed on top.</item>
+        <item>Make the entire top side (the last layer) of the cube a solid color. 57 nontrivial cases.
+
+Those new to OLL break up the step into two. This greatly reduces the number of cases; 2-look OLL has 9 cases. However, note that this is a few seconds slower</item>
+        <item>Finally, you finish the cube by permuting the top layer of the cube. 21 nontrivial cases.
+
+Those new to PLL break up the step into two. This greatly reduces the number of cases; 2-look PLL has 6 cases. However, note that this is a few seconds slower</item>
+    </string-array>
+
+    <string-array name="oll_list">
+        <item>OLL 1</item>
+        <item>OLL 2</item>
+        <item>OLL 3</item>
+        <item>OLL 4</item>
+        <item>OLL 5</item>
+    </string-array>
+
+
+    <string-array name="oll_list_description">
+        <item>Information about the CFOP method</item>
+        <item>Information about the cross</item>
+        <item>First Tow Layers algorithms</item>
+        <item>Permute Last Layer algorithms</item>
+        <item>Orient Last Layer algorithms</item>
+    </string-array>
+
+
+</resources>
