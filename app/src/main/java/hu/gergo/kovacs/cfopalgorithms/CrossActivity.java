@@ -8,6 +8,6 @@ public class CrossActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cross);
+        setContentView(R.layout.test_layout);
     }
 }

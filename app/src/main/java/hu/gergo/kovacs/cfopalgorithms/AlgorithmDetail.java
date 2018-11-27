@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import hu.gergo.kovacs.cfopalgorithms.model.Cases;
 import hu.gergo.kovacs.cfopalgorithms.util.AlgoritmType;
 import hu.gergo.kovacs.cfopalgorithms.util.JSONManager;
-import hu.gergo.kovacs.cfopalgorithms.util.adapter.AlgorithmAdapter;
+import hu.gergo.kovacs.cfopalgorithms.util.adapter.AlgorithmDetailAdapter;
 
 public class AlgorithmDetail extends AppCompatActivity {
     public static ArrayList<String> algsForWeb;
@@ -24,7 +24,7 @@ public class AlgorithmDetail extends AppCompatActivity {
     private ListView listView;
     private Cases cases;
     public int position;
-    private AlgorithmAdapter algorithmAdapter;
+    private AlgorithmDetailAdapter algorithmDetailAdapter;
     private AlgoritmType algType;
     private static String[] webviewURL;
 
@@ -69,8 +69,8 @@ public class AlgorithmDetail extends AppCompatActivity {
         listView = findViewById(R.id.algorithm_detail_list);
         ArrayList<String> descriptions = cases.getAlgorithmsOfCase(position);
         String[] title = new String[descriptions.size()];
-        algorithmAdapter = new AlgorithmAdapter(this, title, descriptions.toArray(new String[descriptions.size()]));
-        listView.setAdapter(algorithmAdapter);
+        algorithmDetailAdapter = new AlgorithmDetailAdapter(this, title, descriptions.toArray(new String[descriptions.size()]));
+        listView.setAdapter(algorithmDetailAdapter);
     }
 
     private void setAlgorithType(String type) {

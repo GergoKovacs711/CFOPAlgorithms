@@ -61,12 +61,71 @@
     </array>
 
     <array name="f2l_list_icons">
-        <item>@drawable/oll_01</item>
-        <item>@drawable/oll_02</item>
+        <item>@drawable/f2l_01</item>
+        <item>@drawable/f2l_02</item>
+        <item>@drawable/f2l_03</item>
+        <item>@drawable/f2l_04</item>
+        <item>@drawable/f2l_05</item>
+        <item>@drawable/f2l_06</item>
+        <item>@drawable/f2l_07</item>
+        <item>@drawable/f2l_08</item>
+        <item>@drawable/f2l_09</item>
+        <item>@drawable/f2l_10</item>
+        <item>@drawable/f2l_11</item>
+        <item>@drawable/f2l_12</item>
+        <item>@drawable/f2l_13</item>
+        <item>@drawable/f2l_14</item>
+        <item>@drawable/f2l_15</item>
+        <item>@drawable/f2l_16</item>
+        <item>@drawable/f2l_17</item>
+        <item>@drawable/f2l_18</item>
+        <item>@drawable/f2l_19</item>
+        <item>@drawable/f2l_20</item>
+        <item>@drawable/f2l_21</item>
+        <item>@drawable/f2l_22</item>
+        <item>@drawable/f2l_23</item>
+        <item>@drawable/f2l_24</item>
+        <item>@drawable/f2l_25</item>
+        <item>@drawable/f2l_26</item>
+        <item>@drawable/f2l_27</item>
+        <item>@drawable/f2l_28</item>
+        <item>@drawable/f2l_29</item>
+        <item>@drawable/f2l_30</item>
+        <item>@drawable/f2l_31</item>
+        <item>@drawable/f2l_32</item>
+        <item>@drawable/f2l_33</item>
+        <item>@drawable/f2l_34</item>
+        <item>@drawable/f2l_35</item>
+        <item>@drawable/f2l_36</item>
+        <item>@drawable/f2l_37</item>
+        <item>@drawable/f2l_38</item>
+        <item>@drawable/f2l_39</item>
+        <item>@drawable/f2l_40</item>
+        <item>@drawable/f2l_41</item>
+        <item>@drawable/f2l_42</item>
     </array>
 
     <array name="pll_list_icons">
-        <item>@drawable/oll_01</item>
-        <item>@drawable/oll_02</item>
+        <item>@drawable/pll_h</item>
+        <item>@drawable/pll_ua</item>
+        <item>@drawable/pll_ub</item>
+        <item>@drawable/pll_z</item>
+        <item>@drawable/pll_aa</item>
+        <item>@drawable/pll_ab</item>
+        <item>@drawable/pll_e</item>
+        <item>@drawable/pll_f</item>
+        <item>@drawable/pll_ga</item>
+        <item>@drawable/pll_gb</item>
+        <item>@drawable/pll_gc</item>
+        <item>@drawable/pll_gd</item>
+        <item>@drawable/pll_ja</item>
+        <item>@drawable/pll_jb</item>
+        <item>@drawable/pll_na</item>
+        <item>@drawable/pll_nb</item>
+        <item>@drawable/pll_ra</item>
+        <item>@drawable/pll_rb</item>
+        <item>@drawable/pll_t</item>
+        <item>@drawable/pll_v</item>
+        <item>@drawable/pll_y</item>
     </array>
 </resources>

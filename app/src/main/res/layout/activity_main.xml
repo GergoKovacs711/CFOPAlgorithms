@@ -4,26 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="hu.gergo.kovacs.cfopalgorithms.MainActivity">
+    tools:context="hu.gergo.kovacs.cfopalgorithms.MainActivity"
+    >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/Appbar"
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/white"
         app:titleTextColor="@color/white">
 
     </android.support.v7.widget.Toolbar>
+
     <ListView
+        android:id="@+id/main_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/lvMain"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:dividerHeight="10dp"
+        android:layout_margin="15dp"
         android:divider="@null"
+        android:dividerHeight="15dp"
         android:scrollbars="none"
         />
 </RelativeLayout>

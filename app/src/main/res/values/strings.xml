@@ -47,6 +47,13 @@ While some cubers still insist on the term "CFOP," Fridrich's contribution to th
 
     <string name="cfop_second_title">Steps</string>
     <string name="cfop_second_paragraph">CFOP can be viewed as an advanced version of a Layer-By-Layer method. In particular, it combines some steps of the said method into one by using many more algorithms. Here, we outline pure CFOP without any additional trick. Also, the cube is commonly solved with the white side on top for the cross, yellow on the bottom for the cross, and opposite for the other steps. However, it is NOT required.</string>
+    <string name="f2l_toolbar_content">
+        "First Two Layers, or F2L are normally the first two bottom layers of the 3x3x3 cube, or essentially all layers up until the last layer on larger cubes.
+
+        The definition is a little different depending on the subject or who you are talking to. Usually, it refers to the part of the CFOP and CFCE methods that solve the first two layers in pairs, excluding the cross step.
+
+        2-gen F2L, most pairs (30 of 41) have the edge sitting in the U-layer having two orientations, it shows R or F colour at the side. If it is the R colour you can solve the pair using only RU and if it is the F colour you can turn the cube (y&apos;) and solve the pair to the back slot using only RU. The only pairs that needs both R and F turns are the six ones with the edge unoriented in the slot, if the edge is oriented in the slot both ways works."
+    </string>
 
 
     <string-array name="CFOPList">

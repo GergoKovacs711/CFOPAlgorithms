@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.lvMain);
+        listView = findViewById(R.id.main_listview);
         setupMainMenu();
     }
 

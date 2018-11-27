@@ -15,7 +15,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/oll_toolbar"
+            android:id="@+id/oll_toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -33,7 +33,7 @@
                 app:layout_collapseMode="pin" />
 
             <Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/oll_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="parallax"

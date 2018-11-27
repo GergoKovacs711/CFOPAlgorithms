@@ -1,11 +1,27 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="WebViewTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/webview_default</item>
+        <item name="colorPrimaryDark">@color/webview_default</item>
+        <item name="android:windowBackground">@color/webview_default</item>
+        <item name="android:navigationBarColor">@color/webview_default</item>
+    </style>
+
+
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#A97946</item>
     </style>
 
     <style name="Title">
@@ -37,9 +53,6 @@
         <item name="android:layout_marginEnd">30dp</item>
         <item name="android:layout_marginStart">30dp</item>
     </style>
-
-
-
 
 
 </resources>

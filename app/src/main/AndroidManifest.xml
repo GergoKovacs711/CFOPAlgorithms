@@ -49,8 +49,10 @@
         <activity
             android:name=".AlgorithmDetail"
             android:configChanges="orientation"
+            android:label="Algorithm details"
             android:screenOrientation="portrait" />
-        <activity android:name=".WebView"></activity>
+        <activity
+            android:name=".WebView"
+            android:theme="@style/WebViewTheme"/>
     </application>
-
 </manifest>
