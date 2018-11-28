@@ -47,14 +47,13 @@ public class OLLActivity extends YouTubeBaseActivity {
     private YouTubePlayer youTubePlayer;
 
     private float appbarOffsetScale;
+    private final int videoHeight = 160;
 
     private boolean firstLoadOfAppbar = true;
     private boolean videoIsLoaded = false;
     private boolean videoIsVisible = false;
     private boolean videoWasPlaying = false;
     private boolean videoSetupTickTock = true;
-
-    private YouTubePlayer.OnInitializedListener onInitializedListener;
 
 
     @Override
@@ -85,12 +84,16 @@ public class OLLActivity extends YouTubeBaseActivity {
                     firstLoadOfAppbar = false;
                     return;
                 }
-
-                int range = appBarLayout.getTotalScrollRange();
+                ;
                 /*Log.i("range", Integer.toString(range));
                 Log.i("offset", Integer.toString(verticalOffset));*/
 
-                if (-verticalOffset <= 160) {
+                // videoSetupTickTock is used to run the setup for the corresponding..
+                // region (video show, below the videoHeight / video hide above, the videoHeight)..
+                // only once. Even if the verticalOffset value is within the..
+                // given range, the video view will only be changed once the appbar has moved to..
+                // the other region
+                if (-verticalOffset <= videoHeight) {
                     if (videoSetupTickTock) {
                         if (!videoIsLoaded) {
                             loadVideo();
@@ -148,7 +151,6 @@ public class OLLActivity extends YouTubeBaseActivity {
                             public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                                 YouTubePlayer ytPlayer, boolean b) {
                                 youTubePlayer = ytPlayer;
-//                                youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
                                 youTubePlayer.setShowFullscreenButton(false);
                                 youTubePlayer.cueVideo(getResources().getString(R.string.oll_youtube_video_url));
                             }
@@ -159,8 +161,6 @@ public class OLLActivity extends YouTubeBaseActivity {
                                 Toast.makeText(OLLActivity.this, "Youtube Failed!", Toast.LENGTH_SHORT).show();
                             }
                         });
-
-                videoIsLoaded = true;
             }
 
 
@@ -228,7 +228,7 @@ public class OLLActivity extends YouTubeBaseActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent intent = new Intent(OLLActivity.this, AlgorithmDetail.class);
                 intent.putExtra("position", position);
-                intent.putExtra("Cases", OLLActivity.getCases());
+                intent.putExtra("Cases", cases);
                 intent.putExtra("json", "oll.json");
                 intent.putExtra("algType", "OLL");
                 startActivity(intent);
@@ -236,10 +236,6 @@ public class OLLActivity extends YouTubeBaseActivity {
         });
     }
 
-    public static Cases getCases() {
-
-        return cases;
-    }
 
     private void setAppBarOffset(int offsetPx) {
         CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) appBarLayout.getLayoutParams();

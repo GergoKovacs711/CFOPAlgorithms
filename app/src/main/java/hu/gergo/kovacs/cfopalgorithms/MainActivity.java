@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case 1: {
-                        Intent intent = new Intent(MainActivity.this, CFOPActivity.class);
+                        Intent intent = new Intent(MainActivity.this, CrossActivity.class);
                         startActivity(intent);
                         break;
                     }

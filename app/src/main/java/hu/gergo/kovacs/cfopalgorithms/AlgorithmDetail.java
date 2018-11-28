@@ -42,7 +42,7 @@ public class AlgorithmDetail extends AppCompatActivity {
         }
 
         String type = getIntent().getStringExtra("algType");
-        setAlgorithType(type);
+        setAlgorithmType(type);
         setupViews();
 
     }
@@ -67,13 +67,13 @@ public class AlgorithmDetail extends AppCompatActivity {
 
     public void setupListView() {
         listView = findViewById(R.id.algorithm_detail_list);
-        ArrayList<String> descriptions = cases.getAlgorithmsOfCase(position);
-        String[] title = new String[descriptions.size()];
+        final ArrayList<String> descriptions = cases.getAlgorithmsOfCase(position);
+        final String[] title = new String[descriptions.size()];
         algorithmDetailAdapter = new AlgorithmDetailAdapter(this, title, descriptions.toArray(new String[descriptions.size()]));
         listView.setAdapter(algorithmDetailAdapter);
     }
 
-    private void setAlgorithType(String type) {
+    private void setAlgorithmType(String type) {
         if (type.equalsIgnoreCase(getResources().getStringArray(R.array.main_list)[2])) {
             algType = AlgoritmType.F2L;
         } else if (type.equalsIgnoreCase(getResources().getStringArray(R.array.main_list)[3])) {
@@ -85,7 +85,7 @@ public class AlgorithmDetail extends AppCompatActivity {
 
     private void setTextView() {
         textView = findViewById(R.id.algorithm_detail_title);
-        String title = cases.getTitles().toArray(new String[0])[position];
+        final String title = cases.getTitles().toArray(new String[0])[position];
         textView.setText(title);
     }
 
@@ -114,7 +114,7 @@ public class AlgorithmDetail extends AppCompatActivity {
     }
 
     public String algToWebUrl(int caseNumber, int algNumber){
-        String alg = cases.getSingleAlgOfCase(caseNumber, algNumber);
+        final String alg = cases.getSingleAlgOfCase(caseNumber, algNumber);
         String url = webviewURL[0] + algType.toString() + webviewURL[1] + algConverter(alg);
         return url;
     }

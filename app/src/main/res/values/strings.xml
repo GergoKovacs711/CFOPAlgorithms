@@ -102,5 +102,18 @@ Those new to PLL break up the step into two. This greatly reduces the number of 
     <string name="pll_toolbar_content">"PLL is the acronym for Permutation of the Last Layer. Permutation of the Last Layer is the last step of many speedsolving methods. In this step, the pieces on the top layer have already been oriented (OLL) so that the top face has all the same color, and they can now be moved into their solved positions. There are 21 PLLs (13 if you count mirrors and inverses as being the same) and each one is named after a letter. The following page gives a list of all of the PLLs, along with a picture and a list of common algorithms for each one. The diagrams below are top views of where you want the pieces to go. For example, the T Permutation (or &apos;T perm&apos;) swaps the UL and UR edges, as well as the UFR and UBR corners. If you like, try out all of the available algorithms for a case to see which one feels the fastest to you - the same algorithm may not be the fastest for everyone, and shorter algorithms are not always faster than longer ones. PLL is a subgroup of ZBLL."</string>
     <string name="pll_youtube_video_url">JvqGU0UZPcE</string>
 
+    <string name="cross_title">The cross</string>
+    <string name="cross_description">
+    "Solving the cross is the first step of the CFOP, it consists of solving the 4 edge pieces of the first layer you choose to start with. After solving them correctly they will form a shape of &quot;cross&quot;. This step is exactly the same as the first step of the beginner&apos;s method, so you should already know how to do it, however with one difference: Solving the cross on the bottom of the cube instead on top. Thus saves the need of flipping the cube upside down during the solving which saves valuable time, and allows much faster shifting to the next step. Solving the cross on the bottom will also allow looking ahead for the next step, which is a key principle in speedcubing. It is ok to keep solving the cross on top, however I highly recommended starting to practice solving it on the bottom already.
+
+    Solving the cross on the bottom won&apos;t be natural at the beginning, mostly due to the fact that you don&apos;t see the being solved pieces. Another con of solving the cross on the bottom is that it&apos;s harder to realize you&apos;d misplaced one of the pieces, which will cost valuable time and setback in resolving the cube.
+
+    Just keep practicing solving the cross on the bottom. It will take longer than solving it on top in the beginning, however after some practicing it will become much easier and worthwhile. Don&apos;t afraid to look at the bottom of the cube during your solving at the beginning, after some practice you&apos;ll be able to avoid this habit.
+
+    Choosing a color: Most of the speedcubers chooses white as the color to start with and solve the cross on. Choosing a color and sticking to it is important, as you will get to know this color-scheme by heart, and get faster recognition for the pieces to solve in next steps (mostly in the F2L).
+
+        Solving the cross is based on intuitive moves only, no algorithms required."
+    </string>
+    <string name="cross_youtube_video_url">x93VB_v5ATM</string>
 
 </resources>
