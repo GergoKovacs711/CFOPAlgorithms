@@ -95,7 +95,12 @@ Those new to PLL break up the step into two. This greatly reduces the number of 
     </string-array>
 
     <string name="f2l_youtube_video_url">Ar_Zit1VLG0</string>
-    <string name="f2l_toolbar_tipp">Pull here for more information</string>
+    <string name="toolbar_tipp">Pull here for more information</string>
+    <string name="oll_toolbar_content">"OLL (short for Orientation of the Last Layer) is a last-layer step for 3x3 that orients all last-layer corners and edges in one step. It is the first last-layer step in many speedsolving methods, including the Fridrich Method. OLL is usually followed by PLL.
+        OLL is the 3rd step of the CFOP, and the &quot;busiest&quot; in respect of the amount of algorithms required to complete it. There are 57 different OLL variations, therefore needed 57 different algorithms to learn in order to complete the OLL step in just 1 algorithm. It is best to start with 2 look OLL and navigate your way around the full OLL."</string>
+    <string name="oll_youtube_video_url">JvqGU0UZPcE</string>
+    <string name="pll_toolbar_content">"PLL is the acronym for Permutation of the Last Layer. Permutation of the Last Layer is the last step of many speedsolving methods. In this step, the pieces on the top layer have already been oriented (OLL) so that the top face has all the same color, and they can now be moved into their solved positions. There are 21 PLLs (13 if you count mirrors and inverses as being the same) and each one is named after a letter. The following page gives a list of all of the PLLs, along with a picture and a list of common algorithms for each one. The diagrams below are top views of where you want the pieces to go. For example, the T Permutation (or &apos;T perm&apos;) swaps the UL and UR edges, as well as the UFR and UBR corners. If you like, try out all of the available algorithms for a case to see which one feels the fastest to you - the same algorithm may not be the fastest for everyone, and shorter algorithms are not always faster than longer ones. PLL is a subgroup of ZBLL."</string>
+    <string name="pll_youtube_video_url">JvqGU0UZPcE</string>
 
 
 </resources>

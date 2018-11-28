@@ -10,79 +10,107 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView style="@style/Title"
+        android:id="@+id/cfop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
             android:id="@+id/cfop_main_title"
-            android:layout_alignParentTop="true"
-            android:text="Title" />
-
-        <ImageView
-            android:id="@+id/cfop_image"
-            android:layout_width="80dp"
-            android:layout_height="105dp"
-            android:textAlignment="center"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/cfop_main_title"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            style="@style/Paragraph"
-            android:id="@+id/cfop_description"
-            android:layout_below="@+id/cfop_image"
-            android:text="Description" />
-
-        <TextView
             style="@style/Title"
+            android:text="Algirthm title"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/cfop_detail_image_layout_outer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/cfop_main_title"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/cfop_detail_image_layout_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/layout_background">
+                <ImageView
+                    android:id="@+id/cfop_image"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="0dp"
+                    android:padding="20dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cfop_description"
+            style="@style/Paragraph"
+            android:layout_below="@id/cfop_detail_image_layout_outer"
+            android:layout_marginTop="27dp"
+            android:text="Description"
+            android:textColor="@color/white"/>
+
+        <TextView
             android:id="@+id/cfop_first_title"
+            style="@style/Title"
+            android:layout_below="@+id/cfop_description"
             android:text="Title"
-            android:layout_below="@+id/cfop_description" />
+            android:textColor="@color/white"/>
 
         <View
             android:id="@+id/divider1"
             style="@style/Divider"
-            android:layout_below="@+id/cfop_first_title" />
+            android:layout_below="@+id/cfop_first_title"/>
 
         <TextView
             style="@style/Paragraph"
             android:id="@+id/cfop_first_paragraph"
             android:layout_below="@+id/divider1"
-            android:text="Paragraph"/>
+            android:text="Paragraph"
+            android:textColor="@color/white"/>
 
         <TextView
             style="@style/Title"
             android:id="@+id/cfop_second_title"
             android:text="Title"
-            android:layout_below="@+id/cfop_first_paragraph" />
+            android:layout_below="@+id/cfop_first_paragraph"
+            android:textColor="@color/white"/>
 
         <View
             android:id="@+id/divider2"
             style="@style/Divider"
-            android:layout_below="@+id/cfop_second_title" />
+            android:layout_below="@+id/cfop_second_title"/>
 
         <TextView
             style="@style/Paragraph"
             android:id="@+id/cfop_second_paragraph"
             android:layout_below="@+id/divider2"
-            android:text="Paragraph"/>
+            android:text="Paragraph"
+            android:textColor="@color/white"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="1000dp"
-            android:layout_below="@id/cfop_second_paragraph">
+            android:layout_below="@id/cfop_second_paragraph"
+            android:background="@color/colorPrimary">
             <ListView
                 android:id="@+id/cfopListView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/white"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:dividerHeight="0dp"
                 android:divider="@null"
+                android:backgroundTint="@color/colorPrimary"
                 />
-
         </RelativeLayout>
-
     </RelativeLayout>
 </ScrollView>

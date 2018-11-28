@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pll_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -12,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/pll_appbar_detail_height"
         android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/pll_toolbar_layout"
@@ -20,35 +23,77 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleTextAppearance="@android:color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/pll_activity_name"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cfop"
+                android:scaleType="center"
+                android:src="@drawable/competition"
                 app:layout_collapseMode="pin" />
 
-            <Toolbar
-                android:id="@+id/pll_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="parallax"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            <RelativeLayout
+                android:id="@+id/pll_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+                <Toolbar
+                    android:id="@+id/pll_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pll_toolbar_height"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="1.0"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    />
 
+                <TextView
+                    android:id="@+id/pll_appbar_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp"
+                    android:layout_marginTop="250dp"
+                    android:text="@string/pll_toolbar_content"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
+                <TextView
+                    android:id="@+id/pll_appbar_tipp_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pll_appbar_text"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/toolbar_tipp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
         </android.support.design.widget.CollapsingToolbarLayout>
-
-
     </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+        <ViewStub
+            android:id="@+id/pll_youtube_view_stub"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="168dp"
+            android:layout="@layout/youtube_view"
+            android:inflatedId="@+id/youtube_view"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
     <ListView
         android:id="@+id/pll_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/f2l_toolbar"
+        android:layout_below="@id/pll_toolbar"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"

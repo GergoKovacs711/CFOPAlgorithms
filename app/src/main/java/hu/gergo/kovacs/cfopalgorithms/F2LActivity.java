@@ -2,21 +2,16 @@ package hu.gergo.kovacs.cfopalgorithms;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Layout;
-import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewStub;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -33,23 +28,25 @@ import hu.gergo.kovacs.cfopalgorithms.util.YoutubePlayerConfig;
 import hu.gergo.kovacs.cfopalgorithms.util.adapter.AlgorithmAdapter;
 
 public class F2LActivity extends YouTubeBaseActivity {
-    private YouTubePlayerView youTubePlayerView;
-    private YouTubePlayer youTubePlayer;
+
     private ListView listView;
     private static Cases cases;
     private AlgorithmAdapter algorithmAdapter;
+
     private CoordinatorLayout coordinatorLayout;
     private AppBarLayout appBarLayout;
     private TextView appBarText;
-    private Animation animFadeIn;
-    private Animation animFadeOut;
+
+    private YouTubePlayerView youTubePlayerView;
+    private YouTubePlayer youTubePlayer;
+
+    private float appbarOffsetScale;
 
     private boolean firstLoadOfAppbar = true;
     private boolean videoIsLoaded = false;
     private boolean videoIsVisible = false;
     private boolean videoWasPlaying = false;
     private boolean videoSetupTickTock = true;
-
 
     private YouTubePlayer.OnInitializedListener onInitializedListener;
 
@@ -62,15 +59,15 @@ public class F2LActivity extends YouTubeBaseActivity {
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.f2l_coordinator);
         appBarLayout = (AppBarLayout) findViewById(R.id.f2l_appbar);
 
-
-        animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.video_fade_in);
-        animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.video_fade_out);
+        TypedValue outValue = new TypedValue();
+        getResources().getValue(R.dimen.f2l_toolbar_offset_scale, outValue, true);
+        appbarOffsetScale = outValue.getFloat();
 
         appBarLayout.post(new Runnable() {
             @Override
             public void run() {
                 int heightPx = findViewById(R.id.f2l_toolbar_layout).getHeight();
-                setAppBarOffset((int)(heightPx * 0.89));
+                setAppBarOffset((int) (heightPx * appbarOffsetScale));
             }
         });
 
@@ -88,9 +85,8 @@ public class F2LActivity extends YouTubeBaseActivity {
                 Log.i("offset", Integer.toString(verticalOffset));*/
 
                 if (-verticalOffset <= 160) {
-                    if(videoSetupTickTock) {
+                    if (videoSetupTickTock) {
                         if (!videoIsLoaded) {
-                            Toast.makeText(F2LActivity.this, "Loading video", Toast.LENGTH_SHORT).show();
                             loadVideo();
                             videoIsLoaded = true;
 
@@ -235,6 +231,7 @@ public class F2LActivity extends YouTubeBaseActivity {
     }
 
     public static Cases getCases() {
+
         return cases;
     }
 
