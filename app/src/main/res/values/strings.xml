@@ -94,5 +94,7 @@ Those new to PLL break up the step into two. This greatly reduces the number of 
         <item>Orient Last Layer algorithms</item>
     </string-array>
 
+    <string name="f2l_youtube_video_url">Ar_Zit1VLG0</string>
+
 
 </resources>

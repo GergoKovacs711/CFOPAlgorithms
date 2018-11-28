@@ -54,11 +54,13 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="20dp"
-                    android:layout_marginTop="@dimen/f2l_toolbar_height"
+                    android:layout_marginTop="250dp"
                     android:text="@string/f2l_toolbar_content"
                     android:textAlignment="textStart"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
+
+
             </RelativeLayout>
 
 
@@ -67,6 +69,22 @@
 
 
     </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+    <view
+        android:id="@+id/f2l_youtube_view"
+        class="com.google.android.youtube.player.YouTubePlayerView"
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="168dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
     <ListView
         android:id="@+id/f2l_listView"
         android:layout_width="match_parent"

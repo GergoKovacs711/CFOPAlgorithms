@@ -53,6 +53,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".WebView"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/WebViewTheme" />
+        <activity android:name=".YoutubeTest" />
+        <activity android:name=".YouTube"></activity>
     </application>
+
 </manifest>

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case 1: {
-                        Intent intent = new Intent(MainActivity.this, CrossActivity.class);
+                        Intent intent = new Intent(MainActivity.this, YouTube.class);
                         startActivity(intent);
                         break;
                     }
