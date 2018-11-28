@@ -2,7 +2,7 @@
 <resources>
     <dimen name="oll_appbar_detail_height">300dp</dimen>
     <dimen name="pll_appbar_detail_height">400dp</dimen>
-    <dimen name="f2l_appbar_detail_height">900dp</dimen>
+    <dimen name="f2l_appbar_detail_height">950dp</dimen>
     <dimen name="detail_backdrop_height">200dp</dimen>
     <dimen name="f2l_toolbar_height">20dp</dimen>
 </resources>

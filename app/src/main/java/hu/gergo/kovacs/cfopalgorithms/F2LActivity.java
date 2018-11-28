@@ -1,5 +1,7 @@
 package hu.gergo.kovacs.cfopalgorithms;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewStub;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -41,8 +44,12 @@ public class F2LActivity extends YouTubeBaseActivity {
     private Animation animFadeIn;
     private Animation animFadeOut;
 
-    boolean wasPlaying = false;
-    boolean videoIsLoaded = false;
+    private boolean firstLoadOfAppbar = true;
+    private boolean videoIsLoaded = false;
+    private boolean videoIsVisible = false;
+    private boolean videoWasPlaying = false;
+    private boolean videoSetupTickTock = true;
+
 
     private YouTubePlayer.OnInitializedListener onInitializedListener;
 
@@ -54,70 +61,128 @@ public class F2LActivity extends YouTubeBaseActivity {
 
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.f2l_coordinator);
         appBarLayout = (AppBarLayout) findViewById(R.id.f2l_appbar);
-        youTubePlayerView = findViewById(R.id.f2l_youtube_view);
-        youTubePlayerView.setVisibility(View.GONE);
-        animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.video_fade_in);
-        animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.video_fade_out);
+
+
+        animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.video_fade_in);
+        animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.video_fade_out);
 
         appBarLayout.post(new Runnable() {
             @Override
             public void run() {
                 int heightPx = findViewById(R.id.f2l_toolbar_layout).getHeight();
-                setAppBarOffset((int) (heightPx * 0.8));
+                setAppBarOffset((int)(heightPx * 0.89));
             }
         });
+
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if(-verticalOffset < 150 && -verticalOffset > 170 && !(-verticalOffset % 10 == 0 ))
+                // if it's the first run exit because verticalOffset give 0 at its first run
+                if (firstLoadOfAppbar) {
+                    firstLoadOfAppbar = false;
                     return;
-
+                }
 
                 int range = appBarLayout.getTotalScrollRange();
-                Log.i("range", Integer.toString(range));
-                Log.i("offset", Integer.toString(verticalOffset));
-//                if (Math.abs(verticalOffset) == range) {
-////                    // Collapsed
-////
-////                } else
+                /*Log.i("range", Integer.toString(range));
+                Log.i("offset", Integer.toString(verticalOffset));*/
 
-                if (-verticalOffset < 160) {
-                    if(!videoIsLoaded){
-                        youTubePlayerView.startAnimation(animFadeIn);
-                        videoIsLoaded = true;
-                    } else {
-                        youTubePlayerView.setVisibility(View.VISIBLE);
-                    }
+                if (-verticalOffset <= 160) {
+                    if(videoSetupTickTock) {
+                        if (!videoIsLoaded) {
+                            Toast.makeText(F2LActivity.this, "Loading video", Toast.LENGTH_SHORT).show();
+                            loadVideo();
+                            videoIsLoaded = true;
 
-
-                    if (youTubePlayer != null) {
-                        if (wasPlaying && !youTubePlayer.isPlaying()) {
-                            Toast.makeText(F2LActivity.this, "wasPlaying", Toast.LENGTH_SHORT).show();
-                            wasPlaying = false;
-                            youTubePlayer.play();
-                        } else {
-                            Toast.makeText(F2LActivity.this, "wasn'tPlaying", Toast.LENGTH_SHORT).show();
+                            youTubePlayerView.setVisibility(View.VISIBLE);
+                            videoIsVisible = true;
                         }
-                    }
 
-                } else if (videoIsLoaded && -verticalOffset > 160){
-                    if (youTubePlayer != null) {
-                        if (youTubePlayer.isPlaying()) {
-                            Toast.makeText(F2LActivity.this, "Playing", Toast.LENGTH_SHORT).show();
-
-                            wasPlaying = true;
-                            youTubePlayer.pause();
-                        } else {
-                            Toast.makeText(F2LActivity.this, "Invisible", Toast.LENGTH_SHORT).show();
-
-                            wasPlaying = false;
+                        if (!videoIsVisible) {
+                            showVideoAnimation();
+                            videoIsVisible = true;
                         }
+
+                        if (youTubePlayer != null) {
+                            if (videoWasPlaying) {
+                                youTubePlayer.play();
+                            }
+                        }
+                        videoSetupTickTock = false;
                     }
-                    youTubePlayerView.startAnimation(animFadeOut);
-                    videoIsLoaded = false;
+
                 } else {
-                    youTubePlayerView.setVisibility(View.INVISIBLE);
+                    if (!videoSetupTickTock) {
+                        if (videoIsLoaded) {
+                            if (youTubePlayer != null) {
+                                if (youTubePlayer.isPlaying()) {
+                                    videoWasPlaying = true;
+                                    youTubePlayer.pause();
+
+                                } else {
+                                    videoWasPlaying = false;
+                                }
+                            }
+
+                            if (videoIsVisible) {
+                                hideVideoAnimation();
+                                videoIsVisible = false;
+                            }
+                        }
+                        videoSetupTickTock = true;
+                    }
                 }
+            }
+
+            public void loadVideo() {
+                ViewStub viewStub = (ViewStub) findViewById(R.id.f2l_youtube_view_stub);
+                viewStub.inflate();
+
+                youTubePlayerView = findViewById(R.id.youtube_view);
+                youTubePlayerView.initialize(YoutubePlayerConfig.API_KEY,
+
+                        new YouTubePlayer.OnInitializedListener() {
+                            @Override
+                            public void onInitializationSuccess(YouTubePlayer.Provider provider,
+                                                                YouTubePlayer ytPlayer, boolean b) {
+                                youTubePlayer = ytPlayer;
+//                                youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+                                youTubePlayer.setShowFullscreenButton(false);
+                                youTubePlayer.cueVideo(getResources().getString(R.string.f2l_youtube_video_url));
+                            }
+
+                            @Override
+                            public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                                YouTubeInitializationResult youTubeInitializationResult) {
+                                Toast.makeText(F2LActivity.this, "Youtube Failed!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                videoIsLoaded = true;
+            }
+
+
+            private void showVideoAnimation() {
+                youTubePlayerView.setAlpha(0f);
+                youTubePlayerView.setVisibility(View.VISIBLE);
+                youTubePlayerView.animate()
+                        .alpha(1f)
+                        .setDuration(300)
+                        .setListener(null);
+
+            }
+
+            private void hideVideoAnimation() {
+                youTubePlayerView.animate()
+                        .alpha(0f)
+                        .setDuration(300)
+                        .setListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                super.onAnimationEnd(animation);
+                                youTubePlayerView.setVisibility(View.INVISIBLE);
+                            }
+                        });
             }
         });
 
@@ -141,24 +206,6 @@ public class F2LActivity extends YouTubeBaseActivity {
 
         appBarText = (TextView) findViewById(R.id.f2l_appbar_text);
         appBarText.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
-
-        YouTubePlayerView youTubePlayerView = findViewById(R.id.f2l_youtube_view);
-
-        youTubePlayerView.initialize(YoutubePlayerConfig.API_KEY,
-                new YouTubePlayer.OnInitializedListener() {
-                    @Override
-                    public void onInitializationSuccess(YouTubePlayer.Provider provider,
-                                                        YouTubePlayer ytPlayer, boolean b) {
-                        youTubePlayer = ytPlayer;
-                        youTubePlayer.cueVideo(getResources().getString(R.string.f2l_youtube_video_url));
-                    }
-
-                    @Override
-                    public void onInitializationFailure(YouTubePlayer.Provider provider,
-                                                        YouTubeInitializationResult youTubeInitializationResult) {
-                        Toast.makeText(F2LActivity.this, "Youtube Failed!", Toast.LENGTH_SHORT).show();
-                    }
-                });
 
         cases = JSONManager.GSONDeserialzer(this, "f2l.json");
         setupListView();

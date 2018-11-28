@@ -23,15 +23,14 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleTextAppearance="@android:color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/f2l_activity_name"
-                android:scaleType="centerCrop"
-                android:src="@drawable/toolbar_backdrop"
+                android:scaleType="center"
+                android:src="@drawable/competition"
                 app:layout_collapseMode="pin" />
 
             <RelativeLayout
@@ -60,11 +59,18 @@
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
-
+                <TextView
+                    android:id="@+id/f2l_appbar_tipp_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f2l_appbar_text"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/f2l_toolbar_tipp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
             </RelativeLayout>
-
-
-
         </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -75,16 +81,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         >
-    <view
-        android:id="@+id/f2l_youtube_view"
-        class="com.google.android.youtube.player.YouTubePlayerView"
-        android:layout_marginTop="50dp"
-        android:layout_width="300dp"
-        android:layout_height="168dp"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"/>
+        <ViewStub
+            android:id="@+id/f2l_youtube_view_stub"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="168dp"
+            android:layout="@layout/youtube_view"
+            android:inflatedId="@+id/youtube_view"
+            android:visibility="invisible"
+            />
     </RelativeLayout>
-
     <ListView
         android:id="@+id/f2l_listView"
         android:layout_width="match_parent"

@@ -95,6 +95,7 @@ Those new to PLL break up the step into two. This greatly reduces the number of 
     </string-array>
 
     <string name="f2l_youtube_video_url">Ar_Zit1VLG0</string>
+    <string name="f2l_toolbar_tipp">Pull here for more information</string>
 
 
 </resources>
