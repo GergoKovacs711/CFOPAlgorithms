@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -22,37 +22,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CFOPActivity"
+            android:name=".activity.CFOPActivity"
             android:configChanges="orientation"
             android:label="@string/cfop_activity_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CrossActivity"
+            android:name=".activity.CrossActivity"
             android:configChanges="orientation"
             android:label="@string/cross_activity_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".F2LActivity"
+            android:name=".activity.F2LActivity"
             android:configChanges="orientation"
             android:label="@string/f2l_activity_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OLLActivity"
+            android:name=".activity.OLLActivity"
             android:configChanges="orientation"
             android:label="@string/oll_activity_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PLLActivity"
+            android:name=".activity.PLLActivity"
             android:configChanges="orientation"
             android:label="@string/pll_activity_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AlgorithmDetail"
+            android:name=".activity.AlgorithmDetailActivity"
             android:configChanges="orientation"
             android:label="Algorithm details"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WebView"
+            android:name=".activity.WebViewActivity"
             android:theme="@style/WebViewTheme"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
