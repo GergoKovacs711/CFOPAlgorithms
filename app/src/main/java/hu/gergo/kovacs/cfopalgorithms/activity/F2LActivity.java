@@ -237,4 +237,11 @@ public class F2LActivity extends YouTubeBaseActivity {
         AppBarLayout.Behavior behavior = (AppBarLayout.Behavior) params.getBehavior();
         behavior.onNestedPreScroll(coordinatorLayout, appBarLayout, null, 0, offsetPx, new int[]{0, 0}, 0);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(F2LActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

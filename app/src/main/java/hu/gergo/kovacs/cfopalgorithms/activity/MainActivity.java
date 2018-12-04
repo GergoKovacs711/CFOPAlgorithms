@@ -52,16 +52,19 @@ public class MainActivity extends AppCompatActivity {
                     case 2: {
                         Intent intent = new Intent(MainActivity.this, F2LActivity.class);
                         startActivity(intent);
+                        finish();
                         break;
                     }
                     case 3: {
                         Intent intent = new Intent(MainActivity.this, OLLActivity.class);
                         startActivity(intent);
+                        finish();
                         break;
                     }
                     case 4: {
                         Intent intent = new Intent(MainActivity.this, PLLActivity.class);
                         startActivity(intent);
+                        finish();
                         break;
                     }
                 }
